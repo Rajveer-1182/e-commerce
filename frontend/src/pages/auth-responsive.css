@@ -1,0 +1,37 @@
+@media (max-width: 900px) {
+  .auth-container {
+    width: 90% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 1rem !important;
+  }
+  .auth-header, .auth-title {
+    font-size: 1.5rem !important;
+    padding: 0.5rem !important;
+  }
+  .auth-form {
+    gap: 1rem !important;
+  }
+  .auth-google {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 0.5rem !important;
+    border-radius: 0 !important;
+  }
+  .auth-header, .auth-title {
+    font-size: 1.1rem !important;
+    padding: 0.2rem !important;
+  }
+  .auth-form input, .auth-form button {
+    font-size: 1rem !important;
+    padding: 0.5rem !important;
+  }
+}
