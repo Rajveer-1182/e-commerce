@@ -58,7 +58,9 @@ const LogIn = () => {
 //  
   return (
 <div className="
-  w-full min-h-screen lg:h-[9vh] flex flex-col lg:flex-row bg-gradient-to-br from-slate-800 via-slate-300 via-slate-100 to-slate-600 items-center justify-center  py-12 gap-12 
+  w-full min-h-screen flex flex-col lg:flex-row
+  bg-gradient-to-br from-slate-800 via-slate-300 via-slate-100 to-slate-600
+  items-center justify-center gap-12
 ">
 
   {/* RIGHT AUTH CARD */}

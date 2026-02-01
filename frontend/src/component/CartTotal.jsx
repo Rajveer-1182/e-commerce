@@ -14,9 +14,9 @@ function CartTotal() {
              <Title text1={"CART"} text2={"TOTALS"}/>
            </div>
 
-           <div className='  flex  flex-col gap-2 mt-2 text-md p-[30px] border-[1px] border-blue-300'>
+           <div className='  flex flex-col gap-2 mt-2 text-md p-[30px] border-[1px] rounded-lg  border-blue-100 bg-blue-500/20 '>
             <div className='flex justify-between text-white text-[18px] p-[10px]'>
-                   <p>Subtotal</p>
+                   <p className='text-semibold'>Subtotal</p>
                    <p> {currency}{getAmount()}</p>
             </div>
                <hr />
