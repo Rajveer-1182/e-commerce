@@ -10,25 +10,25 @@ function CartTotal() {
         const navigate = useNavigate()
   return (
     <div className='w-full lg:ml-[30px]'>
-           <div className='text-xl py-[10px] '>
+           <div className=' py-[0px] px-[10px]'>
              <Title text1={"CART"} text2={"TOTALS"}/>
            </div>
 
-           <div className='  flex flex-col gap-2 mt-2 text-md p-[30px] border-[1px] rounded-lg  border-blue-100 bg-blue-500/20 '>
+           <div className='  flex flex-col gap-2 mt-2 text-md p-[30px] border-[1px] rounded-lg  border-blue-100 bg-black/90 '>
             <div className='flex justify-between text-white text-[18px] p-[10px]'>
-                   <p className='text-semibold'>Subtotal</p>
+                   <p className='text-semibold text-gray-200 text-2xl'>Subtotal</p>
                    <p> {currency}{getAmount()}</p>
             </div>
                <hr />
 
                <div className='flex justify-between text-white text-[18px] p-[10px]'> 
-                     <p>Shipping Fee</p>
+                     <p className='text-gray-200 text-2xl'>Shipping Fee</p>
                      <p>{currency}{delivery_fee}</p>
                </div>
                <hr />
 
                  <div className='flex justify-between text-white text-[18px] p-[10px]'> 
-                     <b>Total Amount</b>
+                     <b className='text-gray-200 text-2xl'>Total Amount</b>
                      <b>{currency}{getAmount() === 0 ? 0: getAmount()+delivery_fee}</b>
                </div>
            </div>

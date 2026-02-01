@@ -33,9 +33,9 @@ function Cart() {
 },[cartItems]);
 
   return (
-    <div className='w-[100vw] lg:w-[99vw] min-h-[100vh] p-[20px] overflow-hidden bg-gray-600 '>
+    <div className='w-[100vw] lg:w-[99vw] min-h-[100vh] p-[20px] overflow-hidden bg-white/10 '>
      <div className='h-[8%] w-[100%] text-center mt-[80px] '>
-            <Title text1={"YOUR"} text2={"CART"}/>
+            <Title text1={"YOUR"} text2={"CART."}/>
      </div>
      
      <div className='w-[100%] h-[92%] flex flex-wrap gap-[20px]'> 
@@ -49,8 +49,6 @@ function Cart() {
   return null; 
 }
                           
-      
-
                 return(
                     <div key={index} className='w-[100%] h-[10%] border-t border-b rounded-lg'>
                         <div className='w-[100%] h-[80%] flex items-start gap-6 bg-slate-800 py-[10px] px-[20px] rounded-[2xl] relative'>
@@ -78,16 +76,11 @@ function Cart() {
                        />
 
                        <IoTrashBinSharp 
-                        className='text-red-300 text-4xl w-[25px] absolute top-[50%] md:top-[40%] md:right-[5%] right-1'
+                        className='text-red-300 text-4xl w-[25px] absolute top-[50%] md:top-[40%] md:right-[5%] right-1 cursor-pointer  hover:text-red-500'
                         onClick={(e)=> updateCart(item._id , item.size , Number(e.target.value,0))}
                        />
                         </div>
-                       
-                     
-                    </div>
-
-                    
-                      
+                    </div>      
                 )
               })
 
@@ -100,7 +93,7 @@ function Cart() {
                             
  
   
-             <button className='text-[18px] hover:bg-slate-500 font-semibold cursor-pointer bg-slate-300 text-black py-[10px] px-[50px] rounded-[4xl] text-bold flex items-center justify-center gap-[20px] border-[3px] border-green-400 ml-[30px] mt-[20px]'
+             <button className='lg:text-[18px] hover:bg-slate-500 font-bold cursor-pointer bg-slate-100 text-black py-[10px] px-[50px] rounded-[4xl]  flex items-center justify-center gap-[10px] border-[1px] border-green-200 lg:ml-[30px] ml-[20px] mt-[20px] rounded-lg'
               onClick={()=>{
                 if (cartData.length > 0){
                     navigate("/placeOrder")
@@ -112,7 +105,6 @@ function Cart() {
               >
            PROCEED TO CHECKOUT
               </button>
-
                        </div>
                       </div>
             

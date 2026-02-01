@@ -6,6 +6,7 @@ import { IoHome } from "react-icons/io5";
 import { MdCollections } from "react-icons/md";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
+import logo1 from "../assets/logo1.jpeg";
 
 
 const Nav = () => {
@@ -23,10 +24,13 @@ const Nav = () => {
   
   <div className="max-w-7xl   mx-auto  px-4 sm:px-6 lg:px-8  py-3  flex items-center justify-between ">
         {/* LOGO */}
-        <div className="text-xl font-bold text-gray-100"
+        <div className="text-xl font-bold text-gray-800 flex cursor-pointer gap-5"
+        
         onClick={()=>navigate("/home")} >
-          OneCart
-        </div>
+           <img src={logo1} alt="Logo" className="w-10 h-10 ml-2"/>
+          OneCart...
+    
+ </div>
 
         {/* MENU (HIDE ON MOBILE, SHOW ON DESKTOP) */}
         <ul className=" hidden md:flex gap-4 ">

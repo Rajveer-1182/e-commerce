@@ -118,8 +118,8 @@ function ProductDetail({Count}) {
              </div>
       </div>
 
-      <div className='w-[100%] min-h-[100vh] bg-slate-600 flex items-start lg:mt-0 justify-start flex-col gap-5 overflow-x-hidden'>
-           <div className=' flex px-[20px] mt-[0px] lg:ml-[80px] ml-[0px] lg:mt-[0px] mt-[100px] font-bold '>
+      <div className='w-[100%] min-h-[100vh] bg-slate-600 flex items-start lg:mt-0 mt- justify-start flex-col gap-5 overflow-x-hidden'>
+           <div className=' flex px-[20px] mt-[0px] lg:ml-[80px] ml-[0px] lg:mt-[0px] mt-[220px] font-bold '>
                     <p className='border px-5 py-3 text-lg text-white'>
                         Description
                     </p>
@@ -129,7 +129,7 @@ function ProductDetail({Count}) {
                     </p>
            </div>
 
-           <div className=' w-[90%]  md:h-[150px] h-[600px] lg:mt-2   bg-slate-500 border text-white text-[13px] md:text-[15px] lg:text-[20px] px-[10px] md:px-[30px] lg:ml-[100px] ml-[20px]'>
+           <div className=' w-[90%]  md:h-[150px] h-[700px] lg:mt-2 mt-0  bg-slate-500 border text-white text-[13px] md:text-[15px] lg:text-[20px] px-[10px] md:px-[30px] lg:ml-[100px] ml-[20px]'>
              <p className='w-[95%] h-[90%] flex items-center justify-center text-lg p-1 mt-1'>
                 I recently purchased clothes from this store, and I am extremely satisfied with the overall experience. The fabric quality feels premium, soft, and comfortable on the skin, making it perfect for daily wear as well as special occasions. The stitching and finishing are neat, showing great attention to detail. The fit was exactly as described on the website, which made online shopping easy and reliable. Colors looked the same as shown in the images, without any fading after washing. Delivery was fast, and the packaging was clean and secure. Customer support was also responsive and helpful when I had a small query about sizing. Overall, this brand offers stylish, high-quality clothing at a reasonable price. I would definitely recommend these clothes to anyone looking for comfort, durability, and modern design. I am happy with my purchase and will shop again soon.
              </p>

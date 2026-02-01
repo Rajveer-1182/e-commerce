@@ -128,11 +128,11 @@ const Home1 = () => {
         {categories.map((item, index) => (
           <div
             key={index}
-            className="relative group w-20 lg:w-70 h-20 lg:h-20  flex flex-col items-center justify-center cursor-pointer"
+            className="relative group w-20 lg:w-70 h-20 lg:h-20  flex flex-col  items-center justify-center cursor-pointer gap-5"
           >
             <img
               src={item.img}
-              className="h-13 lg:h-20 w-13 lg:w-15 rounded-[30%] object-cover "
+              className="h-10 lg:h-20 w-10 lg:w-15 rounded-[30%] object-cover "
             />
 
             <p className="hidden md:flex text-xl font-semibold">
