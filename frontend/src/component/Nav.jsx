@@ -128,10 +128,10 @@ const Nav = () => {
 
       <MdCollections className="text-6xl"
       onClick={()=> navigate('/collection')}
-      />     
+      />      
     
         <MdOutlineAccountCircle className="text-6xl"
-        onClick={() => setShowProfile(!showProfile)}
+        onMouseMove={() => setShowProfile(!showProfile)}
              
         />
 
@@ -140,7 +140,7 @@ const Nav = () => {
                 <p className="px-4 py-2  cursor-pointer  transition-all"
                  onClick={()=> navigate("/order")}
                 >
-                  Orders
+                  Ordersss
                 </p>
                 <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
                 // onClick={()=>{()=>navigate("/about");setShowProfile(false)}}
