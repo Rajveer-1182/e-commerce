@@ -2,6 +2,7 @@ import React from 'react'
 import './auth-responsive.css';
 import { useNavigate } from 'react-router-dom'
 
+import home from '../pages/Home.jsx'
 import google from '../assets/google.jpg'
 import { useContext } from 'react';
 import { authcontext } from '../context/Authcontext';
@@ -122,6 +123,7 @@ const LogIn = () => {
         className="
           mt-2 bg-blue-600  text-white py-2.5 rounded-md  font-medium hover:bg-blue-700  transition
         "
+        onClick={() => Navigate("/home")}
       >
         Sign In
       </button>
