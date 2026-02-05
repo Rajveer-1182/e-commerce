@@ -25,7 +25,7 @@ function BestSeller() {
       {
       bestSeller.map((item,index)=>(
         <Card  key={index}  name={item.name} id={item._id} price={item.price} image={item.image1}/>
-      ))
+      ))  
       }
      </div>
 

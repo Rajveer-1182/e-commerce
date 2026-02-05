@@ -34,22 +34,22 @@ const Nav = () => {
 
         {/* MENU (HIDE ON MOBILE, SHOW ON DESKTOP) */}
         <ul className=" hidden md:flex gap-4 ">
-          <li className="px-5 py-2 bg-gray-800 text-white rounded-full cursor-pointer hover:bg-gray-700"
+          <li className="px-5 py-2 bg-slate-200 text-black font-semibold rounded-full cursor-pointer hover:bg-gray-300"
           onClick={()=>navigate("/home")}
           >
             Home
           </li>
-          <li className="px-5 py-2 bg-gray-800 text-white rounded-full cursor-pointer hover:bg-gray-700"
+          <li className="px-5 py-2 bg-slate-200 text-black font-semibold  rounded-full cursor-pointer hover:bg-gray-300"
           onClick={()=>navigate("/collection")}
           >
             Collections
           </li>
-          <li className="px-5 py-2 bg-gray-800 text-white rounded-full cursor-pointer hover:bg-gray-700"
+          <li className="px-5 py-2 bg-slate-200 text-black font-semibold  rounded-full cursor-pointer hover:bg-gray-300"
           onClick={()=>navigate("/about")}
           >
             About
           </li>
-          <li className="px-5 py-2 bg-gray-800 text-white rounded-full cursor-pointer hover:bg-gray-700"
+          <li className="px-5 py-2 bg-slate-200 text-black font-semibold  rounded-full cursor-pointer hover:bg-gray-300"
           onClick={()=>navigate("/contact")}
           >
             Contact
@@ -79,32 +79,39 @@ const Nav = () => {
           </div>
 
           {/* PROFILE */}
-          <div className="relative">
-            <button onClick={() => setShowProfile(!showProfile)}>
-              <FiUser className=" text-3xl cursor-pointer" />
-            </button>
+      <div
+  className="relative hidden lg:block"
+  onMouseEnter={() => setShowProfile(true)}
+  onMouseLeave={() => setShowProfile(false)}
+>
+  <FiUser className="text-3xl cursor-pointer" />
 
-            {showProfile && (
-              <div className="absolute right-0 mt-3 w-40 bg-gray-800 text-white rounded-xl shadow-lg">
-                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
-                 onClick={()=> navigate("/order")}
-                >
-                  Orders
-                </p>
-                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
-                // onClick={()=>{()=>navigate("/about");setShowProfile(false)}}
-                 onClick={()=> navigate("/about")}
-                >
-                  About
-                </p>
-                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
-                 onClick={()=> navigate("/login")}
-                >
-                  Login
-                </p>
-              </div>
-            )}
-          </div>
+  {showProfile && (
+    <div className="absolute w-40 bg-white text-black rounded-xl shadow-lg">
+      <p
+        className="px-4 py-2 hover:bg-gray-200 text-black cursor-pointer"
+        onClick={() => navigate("/order")}
+      >
+        Order
+      </p>
+
+      <p
+        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+        onClick={() => navigate("/about")}
+      >
+        About
+      </p>
+
+      <p
+        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+        onClick={() => navigate("/login")}
+      >
+        Login
+      </p>
+    </div>
+  )}
+</div>
+
         </div>
       </div>
 
@@ -135,12 +142,14 @@ const Nav = () => {
              
         />
 
+
+     
          {showProfile && (
               <div className="absolute right-20 -mt-45 w-50 text-green-300 rounded-xl shadow-lg bg-gray-500   transition-colors duration-200 hover:bg-gray-600">
                 <p className="px-4 py-2  cursor-pointer  transition-all"
                  onClick={()=> navigate("/order")}
                 >
-                  Ordersss
+                  Orders
                 </p>
                 <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
                 // onClick={()=>{()=>navigate("/about");setShowProfile(false)}}
@@ -156,6 +165,7 @@ const Nav = () => {
               </div>
             )}
     
+
      <div>
         <TiShoppingCart className="text-6xl"
      onClick={()=> navigate('/cart')}       

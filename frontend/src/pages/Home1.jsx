@@ -123,19 +123,19 @@ const categories = [
 
 const Home1 = () => {
   return (
-    <div className="w-full   min-h-[40px]  bg-white  border-b border-slate-200  flex items-center  px-4 sm:px-6 lg:px-12 lg:mt-10 mt-10">
-      <div className="lg:w-full w-[100%] grid grid-cols-6 gap-2 m-5">
+    <div className="w-full   min-h-[40px]  bg-white border-b border-slate-200  flex items-center  px-4 sm:px-6 lg:px-12 lg:mt-10 mt-10">
+      <div className="lg:w-full w-[100%] grid grid-cols-6 mt-[40px]  gap-2 m-5">
         {categories.map((item, index) => (
           <div
             key={index}
-            className="relative group w-20 lg:w-70 h-20 lg:h-20  flex flex-col  items-center justify-center cursor-pointer gap-5"
+            className="relative group w-20 lg:w-70 h-20 lg:h-20  flex flex-col items-center justify-center cursor-pointer gap-5"
           >
             <img
               src={item.img}
-              className="h-10 lg:h-20 w-10 lg:w-15 rounded-[30%] object-cover "
+              className="h-10 lg:h-20 w-10 lg:w-15 bg-gray-300 rounded-[30%] object-cover "
             />
 
-            <p className="hidden md:flex text-xl font-semibold">
+            <p className="hidden md:flex text-xl  font-semibold">
               {item.name}
               <FaChevronCircleDown />
             </p>

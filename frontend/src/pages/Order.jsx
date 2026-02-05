@@ -47,7 +47,7 @@ function Order() {
     
 
   return (
-    <div className='lg:w-[99vw] w-[100vw] h-[100vh] p-[20px] pb-[150px] overflow-hiddden bg-slate-400 '>
+    <div className='lg:w-[100vw] w-[100vw] h-[100vh] p-[20px] pb-[150px] overflow-hiddden bg-white '>
     <div className='h-[8%] w-[100%] text-center mt-[80px]'>
      <Title text1={"MY"} text2={"ORDERS"} />
     </div>
@@ -55,7 +55,7 @@ function Order() {
           {
             orderData.map((item,index)=>(
                 <div key={index}   className='w-[100%] h-[25%]  mt-8 border-t border-b'>
-                     <div className='w-[100%] h-[100%] flex items-start gap-6 bg-slate-600 py-[10px] px-[10px] rounded-2xl relative '>
+                     <div className='w-[100%] h-[100%] flex items-start gap-6 bg-slate-800 py-[10px] px-[10px] rounded-2xl relative '>
                      <img src={item.image1} alt=""  className='lg:h-[80px] lg:w-[80px] h-[140px] w-[140px] rounded-md'/>
                      <div className='flex items-start justify-center flex-col'>
                         <p className='md:text-[25px] text-[20px] text-white font-semibold'>{item.name}</p>
@@ -90,7 +90,7 @@ function Order() {
                           </div>
 
                        <div className='absolute md:right-[5%] right-[1%] md:top-[40%] top-[65%]'>
-                           <button className='px-[15px] py-[7px] px-[5px] rounded-md bg-yellow-100 text-green-300 text-[12px] md:text-[16px] cursor-pointer active:bg-slate-300 '
+                           <button className='px-[15px] py-[7px] px-[5px] rounded-md bg-black text-white text-[12px] md:text-[16px] cursor-pointer active:bg-slate-300 '
                            onClick={loadOrdeData}
                            >
                             {/*  onclick karne par loadorder function se jab data load hoga  and order track hoga */}

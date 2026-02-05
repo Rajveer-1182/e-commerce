@@ -83,10 +83,19 @@ SubCategory.length > 0) {
   }, [category, SubCategory,search,showSearch])
 
   return (
-    <div className='w-full min-h-screen flex flex-col md:flex-row bg-white'>
+    <div className='w-full min-h-screen flex flex-col md:flex-row bg-white mt-10'>
 
       {/* SIDEBAR */}
-      <div className={`w-full md:w-[30vw] lg:w-[20vw] p-5 bg-gray-600 text-red-300 border-r`}>
+    <div
+  className={`
+    w-full lg:h-screen md:w-[30vw] lg:w-[20vw]
+    p-5 bg-gray-600 text-red-300 border-r
+    lg:mt-1 mt-5
+    md:sticky md:top-0
+    `
+  }
+>
+
         <p
           className='font-semibold flex items-center gap-2 cursor-pointer'
           onClick={() => setShowFilter(prev => !prev)}

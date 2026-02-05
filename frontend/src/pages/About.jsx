@@ -5,7 +5,7 @@ import NewLetterBox from '../component/NewLetterBox'
 
 function About() {
   return (
-    <div className='lg:w-[99vw] w-[100vw] md:w-[100vw] min-h-[100vh] flex items-center justify-center flex-col bg-slate-600 gap-[5px] pt-[0px lg:mt-[30px]'>
+    <div className='lg:w-[99vw] w-[100vw] md:w-[100vw] min-h-[100vh] flex items-center justify-center flex-col bg-slate-600 gap-[5px] pt-[0px lg:mt-[50px]'>
     <Title text1={"About "} text2={"Us"} />
     <div className='w-[100%]  flex items-center justify-center flex-col lg:flex-row'>
       
