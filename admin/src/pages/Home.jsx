@@ -35,7 +35,7 @@ const Home = () => {
       },[])
     
   return (
-    <div className="w-screen h-screen bg-blue-400 text-white relative">
+    <div className="w-screen h-screen bg-black text-white relative">
        <Nav/>
        <SideBar/>
         {/*  how many order we get and listed */}
@@ -45,14 +45,14 @@ const Home = () => {
               OneCart Admin Panel </h1> 
 
               <div className='flex items-center justify-start gap-[50px] flex-col md:flex-row '>
-                  <div className='w-[400px] text-gray-300 max-w-[90%] h-[200px] bg-slate-600 flex items-center justify-center flex-col gap-[20px] rounded-lg shadow-sm shadow-black backdrop:blur-lg md:text-[25px] text-[20px] border-[1px] border-green-400'>
+                  <div className='w-[400px] text-gray-100 max-w-[90%] h-[200px] bg-slate-600 flex items-center justify-center flex-col gap-[20px] rounded-lg shadow-sm shadow-black backdrop:blur-lg md:text-[25px] text-[20px] border-[1px] border-blue-400'>
                   Total no of products : <span className='px-[20px] py-[10px] bg-pink-100 text-black rounded-lg flex items-center justify-center border-[1px]'>
                     {totalProducts}
                   </span>
                   </div>
 
 
-                  <div className='w-[400px] text-gray-300 max-w-[90%] h-[200px] bg-slate-600 flex items-center justify-center flex-col gap-[20px] rounded-lg shadow-sm shadow-black backdrop:blur-lg md:text-[25px] text-[20px] border-[1px] border-green-400'>
+                  <div className='w-[400px] text-gray-100 max-w-[90%] h-[200px] bg-slate-600 flex items-center justify-center flex-col gap-[20px] rounded-lg shadow-sm shadow-black backdrop:blur-lg md:text-[25px] text-[20px] border-[1px] border-blue-400'>
                   Total no of Orders : <span className='px-[20px] py-[10px] bg-pink-100 text-black rounded-lg flex items-center justify-center border-[1px]'>
                     {totalOrders}
                   </span>

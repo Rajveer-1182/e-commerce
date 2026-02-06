@@ -43,7 +43,7 @@ fetchAllOrders()
       },[])
 
   return (
-<div className="w-full min-h-screen bg-slate-800 text-white">
+<div className="w-full min-h-screen  text-white">
   <Nav />
 
   <div className="flex min-h-screen">
@@ -58,7 +58,7 @@ fetchAllOrders()
       
       {/* Heading */}
       <div className="
-        text-2xl sm:text-3xl md:text-4xl  font-semibold  mb-6
+        text-2xl sm:text-3xl md:text-4xl text-black font-bold  mb-6
       ">
         All Orders List
       </div>
@@ -69,7 +69,7 @@ fetchAllOrders()
           <div
             key={index}
             className="
-              w-full  bg-green-600   rounded-xl   flex   flex-col lg:flex-row  lg:items-center  justify-between   p-4 sm:p-6
+              w-full  bg-slate-600   rounded-xl   flex   flex-col lg:flex-row  lg:items-center  justify-between   p-4 sm:p-6
             "
           >
             <SiEbox className='w-[40px] h-[40px]'/>

@@ -77,7 +77,7 @@ formData.append("SubCategory", SubCategory)
 
 
   return (
-    <div className='w-[100vw] min-h-[100vh] bg-gray-500  overflow-x-hidden text-white relative'>
+    <div className='w-[100vw] min-h-[100vh] bg-slate-600 overflow-x-hidden text-white relative'>
   <Nav/>
   <SideBar/>
     <div className='w-[82%] h-[100%] flex items-center justify-start overflow-x-hidden absolute right-0'>

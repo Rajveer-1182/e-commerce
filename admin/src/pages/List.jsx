@@ -52,7 +52,7 @@ function List() {
 
 
   return (
-    <div className='w-[99vw] min-h-[100vh] bg-slate-800   text-white '>
+    <div className='w-[99vw] min-h-[100vh]    text-white '>
    <Nav/>
    <div className='w-[100%] h-[100%] flex items-center justify-start'>
   <SideBar/>
