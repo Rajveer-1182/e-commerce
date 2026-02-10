@@ -32,7 +32,7 @@ try {
        <img src={logo1} alt="" />
        <h1 className='text-[20px] text-[black]'>Cart</h1>
      </div>
-             <h1 className='text-black text-5xl font-semibold underline'>Admin Panel</h1>
+             <h1 className='text-black text-5xl font-semibold underline '>Admin Panel</h1>
       <button className='text-[15px] hover:border-[2px] cursor-pointer px-[20px] py-[10px] rounded-2xl text-white bg-black'
       onClick={logOut}
       >Logout</button>
