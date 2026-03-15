@@ -1,66 +1,108 @@
-import React from 'react'
-import Title from '../component/Title'
-import about from '../assets/About.webp'
-import NewLetterBox from '../component/NewLetterBox'
+import React from "react";
+import Title from "../component/Title";
+import about from "../assets/About.webp";
+import NewLetterBox from "../component/NewLetterBox";
 
 function About() {
   return (
-    <div className='lg:w-[99vw] w-[100vw] md:w-[100vw] min-h-[100vh] flex items-center justify-center flex-col bg-slate-600 gap-[5px] pt-[0px lg:mt-[50px]'>
-    <Title text1={"About "} text2={"Us"} />
-    <div className='w-[100%]  flex items-center justify-center flex-col lg:flex-row'>
-      
-      <div className='lg:w-[50%] w-[100%] flex items-center justify-center'>
-        <img src={about} alt=""  className='lg:w-[85%] w-[80%]  shadow-md shadow-black rounded-sm shadow-black/30  transition-all duration-600 ease-in-out hover:-translate-y-2 hover:shadow-black/50' />
+    <div className="w-full min-h-screen flex flex-col items-center bg-slate-100 py-10">
+
+      {/* TITLE */}
+      <Title text1={"About"} text2={"Us"} />
+
+      {/* ABOUT SECTION */}
+      <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center gap-10 px-6 mt-10">
+
+        {/* IMAGE */}
+        <div className="lg:w-1/2 flex justify-center">
+          <img
+            src={about}
+            alt="about"
+            className="w-[90%] rounded-lg shadow-lg hover:-translate-y-2 transition duration-300"
+          />
+        </div>
+
+        {/* TEXT */}
+        <div className="lg:w-1/2 flex flex-col gap-5 text-gray-700">
+
+          <p>
+            Welcome to our e-commerce platform, where we offer a wide range of
+            products at competitive prices. Our mission is to provide an
+            exceptional shopping experience for all our customers.
+          </p>
+
+          <p>
+            A modern shop offers seamless shopping with stylish design, easy
+            navigation, secure payments, fast delivery, and reliable customer
+            support. We focus on quality products and smooth checkout across
+            all devices.
+          </p>
+
+          <h3 className="text-lg font-bold text-purple-600 mt-3">
+            OUR MISSION
+          </h3>
+
+          <p>
+            Our mission is to deliver high-quality products through a reliable
+            and customer-focused shopping experience. We build trust through
+            secure payments, fast delivery, and responsive customer support.
+          </p>
+
+        </div>
       </div>
 
-      <div className='lg:w-[50%] w-[80%] flex items-start justify-center gap-[20px] flex-col mt-[20px] lg:mt-[0px] '>
-    <p className='lg:w-[80%] w-[100%] text-[white] md:text-[16px] text-[13px]'>Welcome to our e-commerce platform, where we offer a wide range of products at competitive prices. Our mission is to provide an exceptional shopping experience for all our customers.</p>
-    <p className='lg:w-[80%] w-[100%] text-[white] md:text-[16px] text-[13px]'>
-     A modern shop offers a seamless shopping experience with stylish design, easy navigation, secure payments, fast delivery, and reliable customer support. It focuses on quality products, transparent pricing, smooth checkout, and mobile-friendly access,
-    </p>
+      {/* WHY CHOOSE US */}
+      <div className="w-full max-w-[1200px] mt-16 px-6">
 
-    <p className='lg:w-[80%] w-[100%] text-[white] lg:text-[18px] text-[15px] mt-[10px] font-bold text-pink-300'>
-   OUR MISSION
-    </p>
+        <Title text1={"WHY"} text2={"CHOOSE US"} />
 
-    <p className='lg:w-[80%] w-[100%] text-[white] md:text-[16px] text-[13px]'>
-  Our mission is to deliver high-quality products through a modern, reliable, and customer-focused shopping experience. We aim to build trust with secure payments, fast delivery, and responsive support, while continuously
-    </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+
+          {/* CARD 1 */}
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+            <h3 className="text-lg font-semibold text-purple-600 mb-3">
+              Quality Assurance
+            </h3>
+            <p className="text-gray-600">
+              We ensure strict quality checks, reliable sourcing, and careful
+              packaging to deliver trusted, high-standard products every time.
+            </p>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+            <h3 className="text-lg font-semibold text-purple-600 mb-3">
+              Convenience
+            </h3>
+            <p className="text-gray-600">
+              Our platform provides easy navigation, quick search, secure
+              checkout, flexible payment options, fast delivery and
+              hassle-free returns.
+            </p>
+          </div>
+
+          {/* CARD 3 */}
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+            <h3 className="text-lg font-semibold text-purple-600 mb-3">
+              Exceptional Customer Service
+            </h3>
+            <p className="text-gray-600">
+              Our dedicated support team provides quick responses, helpful
+              solutions and a friendly experience to build long-term trust
+              with customers.
+            </p>
+          </div>
+
+        </div>
       </div>
-    </div>
-  {/*  Why Choose Us div */}
-    <div className='w-[100%] flex items-center justify-center flex-col lg:mt-[15px] '>
-     <Title text1={"WHY "} text2={" CHOOSE US"} />
-       <div className='w-[80%] flex items-center justify-center lg:flex-row flex-col py-[40px] gap-[10px]'>
 
-       <div className='lg:w-[33%] w-[90%] lg:h-[250px] md:h-[300px] h-[250px] border-[2px] border-gray-300 flex items-ceneter justify-center gap-[20px] flex-col px-[40px] py-[10px] text-[white] backdrop-blur-[2px] bg-slate-600'>
-
-         <b className='text-[20px] font-semibold text-blue-300'> Quality Assurance</b>
-       <p>We ensure strict quality checks, reliable sourcing, and careful packaging to deliver trusted, high-standard products every time.
-        We ensure strict quality checks, reliable sourcing, and careful packaging to deliver trusted, high-standard products every time.
-       </p>
-       </div>
-
-         <div className='lg:w-[33%] w-[90%] lg:h-[250px] md:h-[300px] h-[270px] border-[2px] border-gray-300 flex items-ceneter justify-center gap-[20px] flex-col px-[40px] py-[10px] text-[white] backdrop-blur-[2px] bg-slate-600'>
-
-         <b className='text-[20px] font-semibold text-blue-300'> Convience</b>
-       <p>Convenience is at the heart of our service, offering easy navigation, quick search, secure checkout, flexible payment options, fast delivery, and hassle-free returns. Our platform is designed to save time, reduce effort, and provide a smooth, enjoyable shopping experience anytime, anywhere, across all devices. </p>
-       </div>
-
-         <div className='lg:w-[33%] w-[90%] lg:h-[250px] md:h-[300px] h-[300px] border-[2px] border-gray-300 flex items-ceneter justify-center gap-[20px] flex-col px-[40px] py-[10px] text-[white] backdrop-blur-[2px] bg-slate-600'>
-
-         <b className='text-[20px] font-semibold text-blue-300'> Exceptional Customer Service</b>
-      <p>Exceptional customer service is our priority. We listen carefully, respond quickly, and provide helpful solutions at every step of your journey. Our dedicated support team ensures clear communication, timely assistance, and a friendly experience, building trust and long-term relationships with every customer.</p>
-       </div>
-       
-         </div>  
-    </div>
-
-     {/* letter box */}
-     <NewLetterBox/>
+      {/* NEWSLETTER */}
+      <div className="w-full mt-16">
+        <NewLetterBox />
+      </div>
 
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

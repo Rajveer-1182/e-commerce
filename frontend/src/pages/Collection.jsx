@@ -11,7 +11,7 @@ function Collection() {
 
   const [filterProduct, setFilterProduct] = useState([])
   const [category, setCategory] = useState([])
-  const [SubCategory, setSubCategory] = useState([])
+  const [subCategory, setSubCategory] = useState([])
    const [sortType, setSortType] = useState("relavent")
 
   // CATEGORY TOGGLE
@@ -47,8 +47,8 @@ function Collection() {
     }
 
     if (
-SubCategory.length > 0) {
-      copy = copy.filter(item => SubCategory.includes(item.SubCategory))
+subCategory.length > 0) {
+      copy = copy.filter(item => subCategory.includes(item.subCategory))
     }
     setFilterProduct(copy)
   }
@@ -80,50 +80,125 @@ SubCategory.length > 0) {
 
   useEffect(() => {
     applyFilter()
-  }, [category, SubCategory,search,showSearch])
+  }, [category, subCategory,search,showSearch])
 
   return (
     <div className='w-full min-h-screen flex flex-col md:flex-row bg-white mt-10'>
 
       {/* SIDEBAR */}
-    <div
-  className={`
-    w-full lg:h-screen md:w-[30vw] lg:w-[20vw]
-    p-5 bg-gray-600 text-red-300 border-r
-    lg:mt-1 mt-5
-    md:sticky md:top-0
-    `
-  }
+<div
+  className="
+  w-full
+  md:w-[30vw]
+  lg:w-[22vw]
+  lg:h-screen
+  bg-white
+  border-r
+  shadow-sm
+  p-6
+  md:sticky md:top-0
+  "
 >
 
-        <p
-          className='font-semibold flex items-center gap-2 cursor-pointer'
-          onClick={() => setShowFilter(prev => !prev)}
-        >
-          FILTERS
-          {!showFilter ? <MdKeyboardArrowRight className='md:hidden' /> : <MdKeyboardArrowDown className='md:hidden' />}
-        </p>
+  {/* FILTER HEADER */}
+  <p
+    className="font-semibold text-lg flex items-center justify-between cursor-pointer"
+    onClick={() => setShowFilter(prev => !prev)}
+  >
+    FILTERS
 
-        {/* CATEGORY */}
-        <div className={`mt-6 ${showFilter ? "block" : "hidden"}  md:block`}>
-          <p className='text-green-200 underline mb-2'>CATEGORIES</p>
-          <div className='flex flex-col gap-2'>
-            <label><input type="checkbox" value="men" onChange={toggleCategory} /> Men</label>
-            <label><input type="checkbox" value="Women" onChange={toggleCategory} /> Women</label>
-            <label><input type="checkbox" value="Kids" onChange={toggleCategory} /> Kids</label>
-          </div>
-        </div>
+    {!showFilter ? (
+      <MdKeyboardArrowRight className="md:hidden text-xl" />
+    ) : (
+      <MdKeyboardArrowDown className="md:hidden text-xl" />
+    )}
+  </p>
 
-        {/* SUB CATEGORY */}
-        <div className={`mt-6 ${showFilter ? "block" : "hidden"} md:block`}>
-          <p className='text-green-200 underline mb-2'>SUB CATEGORIES</p>
-          <div className='flex flex-col gap-2'>
-            <label><input type="checkbox" value="Top-wear" onChange={toggleSubCategory} /> Top-Wear</label>
-            <label><input type="checkbox" value="Bottom-wear" onChange={toggleSubCategory} /> Bottom-Wear</label>
-            <label><input type="checkbox" value="Winter-wear" onChange={toggleSubCategory} /> Winter-Wear</label>
-          </div>
-        </div>
-      </div>
+  {/* CATEGORY */}
+  <div className={`mt-8 ${showFilter ? "block" : "hidden"} md:block`}>
+
+    <p className="text-gray-800 font-semibold mb-3 border-b pb-1">
+      Categories
+    </p>
+
+    <div className="flex flex-col gap-3 text-gray-600">
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="men"
+          onChange={toggleCategory}
+          className="accent-purple-500"
+        />
+        Men
+      </label>
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="Women"
+          onChange={toggleCategory}
+          className="accent-purple-500"
+        />
+        Women
+      </label>
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="Kids"
+          onChange={toggleCategory}
+          className="accent-purple-500"
+        />
+        Kids
+      </label>
+
+    </div>
+  </div>
+
+  {/* SUB CATEGORY */}
+  <div className={`mt-8 ${showFilter ? "block" : "hidden"} md:block`}>
+
+    <p className="text-gray-800 font-semibold mb-3 border-b pb-1">
+      Sub Categories
+    </p>
+
+    <div className="flex flex-col gap-3 text-gray-600">
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="Top-wear"
+          onChange={toggleSubCategory}
+          className="accent-purple-500"
+        />
+        Top Wear
+      </label>
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="Bottom-wear"
+          onChange={toggleSubCategory}
+          className="accent-purple-500"
+        />
+        Bottom Wear
+      </label>
+
+      <label className="flex items-center gap-2 cursor-pointer hover:text-purple-600">
+        <input
+          type="checkbox"
+          value="Winter-wear"
+          onChange={toggleSubCategory}
+          className="accent-purple-500"
+        />
+        Winter Wear
+      </label>
+
+    </div>
+  </div>
+
+</div>
 
       {/* RIGHT SECTION */}
       <div className='flex-1 p-5'>
@@ -134,25 +209,33 @@ SubCategory.length > 0) {
          
           <select className='bg-slate-600 text-white h-[45px] px-4 rounded-lg mt-4 lg:mt-0' onChange={(e)=> setSortType(e.target.value) }>
             <option value="relavent">Sort By: Relevant</option>
-            <option  value=" low-high">Low to High</option>
+            <option  value="low-high">Low to High</option>
             <option value="high-low">High to Low</option>
           </select>
         </div>
           <hr />
         {/*Get from the shopdatacontext PRODUCTS */}
-        <div className='mt-8 flex flex-wrap justify-center gap-5'>
-          {
-            filterProduct.map((item) => (
-              <Card
-                key={item._id}
-                id={item._id}
-                name={item.name}
-                price={item.price}
-                image={item.image1}
-              />
-            ))
-          }
-        </div>
+       <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+
+  {
+    filterProduct.length === 0 ? (
+      <p className="text-gray-500 text-lg col-span-full text-center">
+        No products found
+      </p>
+    ) : (
+      filterProduct.map((item) => (
+        <Card
+          key={item._id}
+          id={item._id}
+          name={item.name}
+          price={item.price}
+          image={item.image1}
+        />
+      ))
+    )
+  }
+
+</div>
 
       </div>
     </div>

@@ -1,46 +1,64 @@
-import React from 'react'
-import Title from '../component/Title'
-import Contact1 from '../assets/Contact1.jpeg'
-import NewLetterBox from '../component/NewLetterBox'
+import React from "react";
+import Title from "../component/Title";
+import Contact1 from "../assets/Contact1.jpeg";
+import NewLetterBox from "../component/NewLetterBox";
 
 function Contact() {
   return (
-    <div className='lg:w-[99vw] w-[100vw] md:w-[100vw] min-h-[100vh] flex items-center justify-center flex-col bg-slate-600 gap-[50px] pt-[80px]'>
-     <Title text1={"CONTACT "} text2={"US"}/>
-     <div className='w-[100%] flex items-center justify-center flex-col lg:flex-row'>
-        
-      <div className='lg:w-[50%] w-[100%] flex items-center justify-center'>
+    <div className="w-full min-h-screen flex flex-col items-center bg-slate-100 py-16">
 
-        <img src={Contact1} alt=""  className='lg:w-[70%] w-[80%]  shadow-md shadow-black rounded-sm flex items-center justify-center'/>
-      </div>
+      {/* Title */}
+      <Title text1={"CONTACT"} text2={"US"} />
 
-      <div className='lg:w-[50%] w-[80%] flex items-start justify-center gap-[20px] flex-col mt-[20px] lg:mt-[0px]'>
-           <p className='lg:w-[80%] w-[100%] text-[white] font-bold lg:text-[18px] text-[15px]'>
-           OUR STORE</p>
+      {/* Contact Section */}
+      <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center gap-12 px-6 mt-10">
 
-         <p className='lg:w-[80%] w-[100%] text-[white] md:text-[16px] text-[13px]'>
-         
-                  <p>12345,Random city station</p>
-                  <p>Email: admin@onecart.com</p>
-         </p>
+        {/* Image */}
+        <div className="lg:w-1/2 flex justify-center">
+          <img
+            src={Contact1}
+            alt="contact"
+            className="w-[85%] rounded-xl shadow-lg hover:-translate-y-1 transition duration-300"
+          />
+        </div>
 
-         <p className='lg:w-[80%] w-[100%] text-[white] font-bold lg:text-[18px] text-[15px]'>
-           Shopping Hours at One Cart
-         </p >
+        {/* Contact Details */}
+        <div className="lg:w-1/2 flex flex-col gap-5 text-gray-700">
 
-         <p className='lg:w-[80%] w-[100%] text-[white] font-bold lg:text-[18px] text-[13px]'>
-                 Learn More About Our Store Hours about our job openning
-         </p>
+          <h3 className="text-xl font-bold text-purple-600">
+            Our Store
+          </h3>
 
-         <button className='px-[30px] py-[20px] flex items-center justify-center text-white bg-transparent border active:bg-slate-600 rounded-md cursor-pointer hover:bg-purple-700 border-[1px] shadow-sm shadow-black mt-5'>
+          <p>
+            12345 Random City Station
+          </p>
+
+          <p>
+            Email: admin@onecart.com
+          </p>
+
+          <h3 className="text-xl font-bold text-purple-600 mt-4">
+            Shopping Hours at One Cart
+          </h3>
+
+          <p>
+            Learn more about our store hours and explore job openings.
+          </p>
+
+          <button className="w-fit px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition shadow-md">
             Explore Jobs
-         </button>
-      </div>
-     </div>
+          </button>
 
-     <NewLetterBox/>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="w-full mt-16">
+        <NewLetterBox />
+      </div>
+
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

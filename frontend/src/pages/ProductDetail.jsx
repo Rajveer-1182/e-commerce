@@ -22,7 +22,7 @@ function ProductDetail({Count}) {
 
 
     const fetchProductDetails = async () => {
-    products.map((item)=>{
+    products.find((item)=>{
         if(item._id === productId){
             setProductDa(item)
             console.log(productData)
@@ -37,9 +37,29 @@ function ProductDetail({Count}) {
     })
     }
 
+
+const handleAddCart = () => {
+
+ if(!size){
+  toast.error("Please select a size")
+  return
+ }
+
+ addtoCart(productData._id,size)
+}
+
     useEffect(()=>{
         fetchProductDetails()
     },[productId, products])
+
+
+      if(!productData){
+    return (
+      <div className="flex items-center justify-center h-screen text-xl">
+        Loading product...
+      </div>
+    )
+  }
 
   return productData ?  (
     <div className=''>
@@ -98,18 +118,23 @@ function ProductDetail({Count}) {
                 <div className='flex gap-2'>
                    {
                     productData.sizes.map((item, index)=>{
-                        return ( <button key={index} className={`border py-2 px-4  border-slate-300 rounded-md ${item === size ? 'bg-green-500 text-white' : 'bg-white text-black text-2xl'}`}
+                        return ( <button key={index} className={`border py-2 px-4  border-slate-800 rounded-md ${item === size ? 'bg-green-500 text-white' : 'bg-white text-black text-2xl cursor-pointer'}`}
                         onClick={()=> setSize(item)}
                         >{item} </button>)
                     })
                    }
                 </div>
-                <button className=' text-[16px] cursor-pointer bg-green-200 text-black py-4 px-6 shadow-md rounded-md mt-5 hover:bg-green-600 transition-all duration-300 ease-in-out' onClick={()=> addtoCart(productData._id , size)}>
-                    Add to Cart
-                </button>
+
+                  <button
+onClick={handleAddCart}
+className="text-2xl font-semibold cursor-pointer bg-gray-100 text-black py-4 px-6 shadow-md rounded-md mt-5 hover:bg-green-600 transition-all duration-300 ease-in-out"
+>
+Add to Cart
+</button>
+
                </div>
 
-                <div className='h-[20px] bg-gray-200 w-[85%]'></div>
+                <div className='h-[1px] bg-gray-200 w-[85%]'></div>
                       <div className='w-[100%] lg:w-[80%] h-[120px] text-[16px] text-white font-semibold'>
                         <p className='text-purple-200'>100% Original Products</p>
                         <p className='text-purple-200'> Cash On delivery available on this product</p>

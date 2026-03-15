@@ -1,29 +1,77 @@
-import React from 'react'
+// 
+
+import React from "react";
 
 function NewLetterBox() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-  }
+    // form logic
+  };
+
   return (
-    <div className='w-[100%] h-[40vh] bg-slate-600 flex items-center justify-start gap-[10px] flex-col '>
-     <p className='md:text-[30px] text-[20px] text-purple-200 px-[20px] font-semibold mt-[20px]'>
-       Subscribe to our newsletter & get 30% off on your first purchase!
-     </p>
-        <p className='text-white text-center px-[20px]'>
-          Get the latest updates and offers enjoy , exculsive , specialdeals , and early acces to Collection
-        </p>
+    <div className="w-full bg-slate-100 py-20 flex flex-col items-center text-center px-5">
 
-        <form action="" onSubmit={handleSubmit}
-         className='w-[100%] h-[45%] md:h-[50%] lg:flex flex-col  flex items-center justify-center mt-[10px] gap-[5px] px-[50px]'
+      {/* Heading */}
+      <h2 className="text-2xl md:text-4xl font-bold text-gray-800 max-w-[700px]">
+        Subscribe to our newsletter & get 
+        <span className="text-purple-600"> 30% off</span> on your first purchase
+      </h2>
+
+      {/* Subtext */}
+      <p className="text-gray-600 mt-4 max-w-[600px] text-sm md:text-lg">
+        Get the latest updates, exclusive offers, special deals and early
+        access to our newest collections.
+      </p>
+
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="mt-8 flex flex-col sm:flex-row gap-4 w-full max-w-[600px]"
+      >
+
+        {/* Input */}
+        <input
+          type="text"
+          placeholder="Enter your email"
+          required
+          className="
+          flex-1
+          px-5
+          py-3
+          rounded-lg
+          border
+          border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-purple-400
+          text-gray-700
+          "
+        />
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="
+          px-6
+          py-3
+          bg-purple-600
+          text-white
+          font-semibold
+          rounded-lg
+          hover:bg-purple-700
+          transition
+          duration-300
+          shadow-md
+          "
         >
+          Subscribe
+        </button>
 
-          <input type="text" placeholder='Enter your name !' className='w-[600px] max-w-[60%] h-[50px] px-[40px] text-lg font-semibold bg-slate-300 text-black rounded-lg shadow-sm shadow-black md:h-[50%] flex items-center justify-center mt-[20px] gap-[20px] px-[20px]' required />
-          <button type='submit' className='w-[120px] h-[60px] text-30px md:text-[16px] px-[10px] hover:bg-purple-700 border-[1px] cursor-pointer rounded-lg shadow-sm bg-purple-500 text-white rounded-lg shadow-sm shadow-black mt-5'>Subscribe</button>
-        </form>
+      </form>
+
     </div>
-  )
+  );
 }
 
-export default NewLetterBox
+export default NewLetterBox;

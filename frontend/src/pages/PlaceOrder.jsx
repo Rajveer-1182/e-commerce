@@ -138,7 +138,7 @@ function PlaceOrder() {
 
     
   return (
-    <div className='lg:w-[99vw] w-[100vw] min-h-[100vh] bg-slate-500 flex items-center justify-center flex-col md:flex-row gap-[50px] relative'>
+    <div className='lg:w-[99vw] w-[100vw] min-h-[100vh] bg-gray-100 flex items-center justify-center flex-col md:flex-row gap-[50px] relative'>
          <div className='lg:w-[50%] w-[100%] h-[100%] flex items-center justify-center lg:mt-[0px] mt-[90px]'>
              <form action=" " onSubmit={onsubmitHandler} className=' lg:w-[70%] w-[95%} lg:h-[70%] h-[100%]'>
                  
@@ -198,14 +198,7 @@ function PlaceOrder() {
                                <div>
 
                                   <button type='submit'  className='text-[18px] hover:bg-slate-500 cursor-pointer bg-slate-600 py-[10px] px-[50px] rounded-lg text-white flex items-center justify-center gap-[20px] border-[1px] border-green-100 ml-[30px] mt-[20px]'
-              // onClick={()=>{
-              //   if (cartData.length > 0){
-              //       navigate("/placeorder")
-              //   }
-              //   else{
-              //       console.log(" your cart is empty")
-              //   }
-              // }}
+
               > Place Order</button>  
                                </div>
              </form>       
@@ -233,13 +226,6 @@ function PlaceOrder() {
 </button>
 
 
-
-
-                     {/* <button className={`w-[150px] h-[50px] bg-green-300 cursor-pointer rounded-sm  ${method === "razorPay" ? 'border-[5px] border-blue-800 bg-yellow-800 rounded-sm' : ' '}`}>
-                       <img src={RazorPay} alt=""  className='w-[100%] h-[100%] object-fill rounded-sm'/>
-                     </button> */}
-
-
                          <button type="button"
   onClick={() => setMethod("COD")}
   className={`w-[200px] h-[50px] cursor-pointer font-bold
@@ -249,12 +235,6 @@ function PlaceOrder() {
   CASH ON DELIVERY
 </button>
 
-
-
-                        {/* it is set default cash on delivery for every payment */}
-                         {/* <button className={`w-[200px] h-[50px] bg-green-50 text-[14px] cursor-pointer px-[20px] rounded-xl font-bold  ${method === "COD" ? 'border-[2px] border-blue-800 rounded-sm' : ' '}`}>
-                          CASH ON DELIVERY
-                          </button>  */}
                     </div>
 
 

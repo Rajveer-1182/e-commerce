@@ -1,58 +1,60 @@
-import React from 'react'
-import logo from '../assets/mainlogo.jpeg'
+import React from "react";
+import logo from "../assets/mainlogo.jpeg";
 
 function Footer() {
   return (
-    <div className='w-[100%] md:h-[36vh] h-[20vh] bg-slate-800 h-[30%]'>
-     <div className='w-[100%] md:h-[30vh]  h-[25vh] flex items-center justify-start md:px-[50px] px-[10px]'>
-           {/* this the main div for our 3 type of object */}
-         <div className='md:w-[30%] w-[40%] h-[100%] lg:flex items-start justify-center lg:flex-col'>
-          <div className='lg:flex items-start justify-center  mt-[30px] md:mt-[40px] gap-[10px]'>
-              <img src={logo} alt="" className='md:w-[40px] md:h-[40px] w-[100px] h-[50px]' />
-              <p className='text-[19px] md:text-[20px] text-[black] '>One cart</p>
-               </div>
-             <p className='text-[15px]  text-[black]  text-gray-300 hidden md:block'>We ensure secure payments, fast delivery, easy returns, data privacy protection, and reliable customer support for all shoppers.</p>
-             <p className='text-[15px]  text-[black] text-gray-300 lg:hidden '>Our e-commerce platform for customers.</p>
+    <footer className="w-full bg-slate-900 text-gray-300 pt-16 pb-6">
+
+      {/* Main Footer */}
+      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* Logo Section */}
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="logo" className="w-10 h-10 rounded" />
+            <h2 className="text-xl font-semibold text-white">One Cart</h2>
           </div>
 
-
-          <div className='md:w-[25%] lg:w-[100%] ml-[20px]   h-[100%] flex items-center justify-center flex-col lg:flex-row text-center '>
-            <div className='flex lg:flex-col flex-col  items-center justify-center gap-[5px]  md:mt-[40px]'>
-             <p className='text-[16px]  md:text-[20px] font-bold  text-gray-200 md:block cursor-pointer'>
-                     COMPANY 
-                       </p>
-                <ul>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>Home</li>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>About</li>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>Delivery</li>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>Privacy Policy</li>
-                </ul>
-            </div>
-             </div>
-         
-         <div className='w-[30%] h-[100%]  ml-[30px] flex items-center justify-center flex-col text-center '>
-             <div className='flex lg:flex-col  items-center justify-center gap-[5px] md:mt-[40px]'>
-             <p className='text-[16px] font-bold md:text-[20px] text-gray-200 md:block cursor-pointer'>
-                    GET IN TOUCH
-                       </p>
-                      </div>
-                        <ul>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>+9198889432534</li>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>Patel Nagar road</li>
-                    <li className='text-[15px] text-gray-200 md:block cursor-pointer'>contact@gmail.com</li>
-                    <li className='text-[15px] text-gray-200  md:block cursor-pointer'>admin@gmail.com</li>
-                </ul>
-         </div>
-     </div>
-
-             
-              <div className='w-[100%] h-[2px] bg-slate-600 '>
-                <div className='w-[100%] h-[5vh] bg-gary-100 flex items-center text-[white] justify-center'>
-                   Copy-All right reserved &copy; 2024 Rights Reserved
-                </div>
+          <p className="text-sm text-gray-400 leading-relaxed">
+            We ensure secure payments, fast delivery, easy returns, data
+            privacy protection, and reliable customer support for all
+            shoppers.
+          </p>
         </div>
-    </div>
-  )
+
+        {/* Company Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+
+          <ul className="space-y-2">
+            <li className="hover:text-purple-400 cursor-pointer transition">Home</li>
+            <li className="hover:text-purple-400 cursor-pointer transition">About</li>
+            <li className="hover:text-purple-400 cursor-pointer transition">Delivery</li>
+            <li className="hover:text-purple-400 cursor-pointer transition">Privacy Policy</li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Get In Touch</h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>+91 98889 43253</li>
+            <li>Patel Nagar Road</li>
+            <li>contact@gmail.com</li>
+            <li>admin@gmail.com</li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* Bottom Line */}
+      <div className="border-t border-slate-700 mt-12 pt-5 text-center text-sm text-gray-400">
+        © 2024 One Cart. All Rights Reserved.
+      </div>
+
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

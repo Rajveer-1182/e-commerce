@@ -33,7 +33,7 @@ function Cart() {
 },[cartItems]);
 
   return (
-    <div className='w-[100vw] lg:w-[99vw] min-h-[100vh] p-[20px] overflow-hidden bg-white/10 '>
+    <div className='w-[100vw] lg:w-[99vw] min-h-[100vh] p-[20px] overflow-hidden'>
      <div className='h-[8%] w-[100%] text-center mt-[80px] '>
             <Title text1={"YOUR"} text2={"CART."}/>
      </div>
@@ -51,17 +51,17 @@ function Cart() {
                           
                 return(
                     <div key={index} className='w-[100%] h-[10%] border-t border-b rounded-lg'>
-                        <div className='w-[100%] h-[80%] flex items-start gap-6 bg-slate-800 py-[10px] px-[20px] rounded-[2xl] relative'>
+                        <div className='w-[100%] h-[80%] flex items-start gap-6 bg-gray-100 py-[10px] px-[20px] rounded-[4xl] relative'>
                             <img 
                              className='h-[100px] w-[100px] rounded-md'
                             src={productData.image1} alt="" />
                         
                           <div className='flex items-start justify-center flex-col gap-[10px] '>
-                   <p className='text-xl font-semibold text-gray-200 '>
+                   <p className='text-xl font-semibold  '>
                     {productData.name}
                    </p>
 
-                   <p className='text-md font-medium text-gray-300 '>
+                   <p className='text-md font-medium  '>
                    {currency} {productData.price}
                    </p>
                    
