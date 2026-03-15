@@ -52,13 +52,13 @@ function List() {
 
 
   return (
-    <div className='w-[99vw] min-h-[100vh] bg-slate-600  text-white '>
+    <div className='w-[99vw] min-h-[100vh] bg-gray-100 text-white '>
    <Nav/>
    <div className='w-[100%] h-[100%] flex items-center justify-start'>
   <SideBar/>
 
   <div className='w-[82%] h-[100%] lg:ml-[320px] md:ml-[230px] mt-[70px] flex flex-col gap-[30px]  overflow-x-hidden  py-[50px] ml-[100px]'>
-   <div className='w-[400px] h-[50px] text-[28px] md:text-[40px] text-white font-semibold'>
+   <div className='w-[400px] h-[50px] text-[28px] md:text-[40px] text-black font-semibold'>
     All Listed product
    </div>
 

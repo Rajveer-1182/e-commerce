@@ -35,13 +35,13 @@ const Home = () => {
       },[])
     
   return (
-    <div className="w-screen h-screen bg-black text-white relative">
+    <div className="w-screen h-screen bg-gray-200 text-white relative">
        <Nav/>
        <SideBar/>
         {/*  how many order we get and listed */}
 
         <div className='w-[70vw] h-[100vh] absolute left-[25%] flex items-start flex-col gap-[40px] py-[100px]'>
-            <h1 className='text-[35px] text-gray-300'> 
+            <h1 className='text-[35px] text-black font-semibold'> 
               OneCart Admin Panel </h1> 
 
               <div className='flex items-center justify-start gap-[50px] flex-col md:flex-row '>
