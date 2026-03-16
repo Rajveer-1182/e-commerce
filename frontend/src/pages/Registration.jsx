@@ -91,7 +91,7 @@ const Registration = () => {
       hover:bg-slate-50 transition"
     >
       <img src={google} alt="google" className="w-5 h-5" />
-      <span className="text-sm font-medium text-slate-700">
+      <span className="text-sm  font-medium text-slate-700">
         Continue with Google
       </span>
     </button>

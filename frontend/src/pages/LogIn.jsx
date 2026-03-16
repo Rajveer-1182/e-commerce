@@ -29,7 +29,7 @@ const LogIn = () => {
       }, { withCredentials: true });
       console.log(result.data);
        toast.success("User Logged in success")
-      Navigate("/")
+      Navigate("/home")
     } catch (error) {
       console.error("Error in handleSingIn:", error.response ? error.response.data : error.message);
     toast.error("user Not Logged In")
@@ -50,7 +50,9 @@ const LogIn = () => {
         withCredentials: true
       });
       console.log(result.data);
+      // toast.success("google login Success")
       toast.success("google login Success")
+Navigate("/home")
     } catch (error) {
       toast.success("google Login failed")
       console.log("error in the googleAuth" + error);
@@ -123,7 +125,7 @@ const LogIn = () => {
         className="
           mt-2 bg-blue-600  text-white py-2.5 rounded-md  font-medium hover:bg-blue-700  transition
         "
-        onClick={() => Navigate("/home")}
+        // onClick={() => Navigate("/home")}
       >
         Sign In
       </button>
