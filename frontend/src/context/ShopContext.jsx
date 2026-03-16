@@ -86,7 +86,7 @@ const getProducts = async ()=>{
 const getUserCart = async ()=>{
 try {
     let response = await axios.post(saveUrl + "/api/cart/get",{},{withCredentials: true});
-
+    
     setCartItems(response.data);
     console.log("user cart data", response.data);
 } catch (error) {
