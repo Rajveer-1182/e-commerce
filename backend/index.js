@@ -21,16 +21,19 @@ connectDB();
 
 import cors from "cors";
 
+import cors from "cors";
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://e-commerce-livid-three-31.vercel.app",
-    "https://e-commerce-git-main-unknown9.vercel.app"
+    /vercel\.app$/
   ],
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   credentials: true
 }));
+
+app.options("*", cors());
 
 app.options("*", cors());
 
