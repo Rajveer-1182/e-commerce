@@ -12,12 +12,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APPID
 };
 
-// console.log(apiKey)
-// console.log(authDomain)
-// console.log(projectId)
-// console.log(storageBucket)
-// console.log(messagingSenderId)
-console.log(import.meta.env.VITE_FIREBASE_APIKEY);
 
 
 
