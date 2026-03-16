@@ -41,8 +41,9 @@ export const register = async (req,res)=>{
       const token = generateToken(user._id)
       res.cookie("token" ,token,{
         httpOnly:true,
-        sameSite:"strict",
-        secure:false
+        sameSite:"None",
+        secure:true,
+        maxAge: 7 * 24 * 60 * 60 * 1000
       })
 
       const userData = user.toObject()
@@ -85,8 +86,10 @@ export const login = async(req,res)=>{
     const token = generateToken(user._id)
 
     res.cookie("token", token,{
-      httpOnly:true,
-      sameSite:"strict"
+       httpOnly: true,
+  secure: true,
+  sameSite: "None",
+  maxAge: 7 * 24 * 60 * 60 * 1000
     })
 
     return res.status(200).json(user)
