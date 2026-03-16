@@ -21,7 +21,9 @@ connectDB();
 
 app.use(cors({
     // origin must exactly match the browser Origin header (no trailing slash)
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["http://localhost:5173", "http://localhost:5174",
+        "https://e-commerce-livid-three-31.vercel.app"
+    ],
     credentials: true
 }))
 
