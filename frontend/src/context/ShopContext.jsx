@@ -23,13 +23,7 @@ export const ShopDataContext = createContext(null)
     const { saveUrl } = useContext(authcontext);
    let currency = "$";
    let delivery_fee  = 10;
-   
 
-// get request on the server url 
-
-// it is toasstify function
-
-// const notify = () => toast.success('Cart added successfully!');
 
 //  we fetch the product from backend
 const getProducts = async ()=>{
@@ -144,26 +138,6 @@ else {
        }
        return Count;
    }
-
-//    const getAmount = ()=>{
-//     let totalAmount = 0;
-//     for(let items in cartItems){
-//     let itemInfo  = products.find((product) => product._id === items)
-//     for(let item in cartItems[items]){  
-//       try {
-//         if(cartItems[items][item]>0){
-//             totalAmount += itemInfo.price * cartItems[items][item];
-//             console.log(totalAmount)
-//         }
-//         // console.log(totalAmount)
-//       } catch (error) {
-//         console.log(error)
-//       }
-
-// }
-//     return totalAmount;
-//    }
-// }
 
 const getAmount = () => {
   let totalAmount = 0;
