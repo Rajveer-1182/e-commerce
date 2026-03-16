@@ -19,6 +19,8 @@ const app = express()
 connectDB();
 
 
+import cors from "cors";
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
@@ -26,8 +28,11 @@ app.use(cors({
     "https://e-commerce-livid-three-31.vercel.app",
     "https://e-commerce-git-main-unknown9.vercel.app"
   ],
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   credentials: true
 }));
+
+app.options("*", cors());
 
 app.use(express.json())
 app.use(cookieParser())
