@@ -21,21 +21,31 @@ connectDB();
 
 
 // Allow CORS from the frontend origin(s).
-// Update the list below (or set env vars) when you deploy to a new domain.
+// Use environment variables for explicit allowed URLs and also allow Vercel deployments.
 const allowedOrigins = [
   process.env.CLIENT_URL,
   process.env.CLIENT_URL_2,
   "http://localhost:5173",
   "http://localhost:5174",
-  "https://e-commerce-livid-three-31.vercel.app",
-  "https://e-commerce-o97j74kui-unknown9.vercel.app",
 ].filter(Boolean);
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl)
+    // Allow requests with no origin (like mobile apps, curl, or same-server requests)
     if (!origin) return callback(null, true);
+
+    // Exact match allowed origins
     if (allowedOrigins.includes(origin)) return callback(null, true);
+
+    // Allow Vercel preview/production domains (adds flexibility for different deploy URLs)
+    try {
+      const url = new URL(origin);
+      if (url.hostname.endsWith('.vercel.app')) return callback(null, true);
+    } catch (e) {
+      // fall through
+    }
+
+    // Deny others explicitly (helps debugging by returning a useful message)
     callback(new Error(`CORS policy does not allow access from origin ${origin}`));
   },
   credentials: true,

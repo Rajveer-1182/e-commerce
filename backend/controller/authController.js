@@ -129,8 +129,9 @@ export const googleregister = async(req, res)=>{
       let token = await generateToken(user._id)
       res.cookie("token",token,{
         httpOnly:true,
-        secure:false,
-        sameSite:"strict",
+        secure:true,
+        sameSite:"none",
+        maxAge: 7 * 24 * 60 * 60 * 1000
 
       })
       return res.status(200).json({
@@ -170,7 +171,9 @@ export const googlelogin = async(req , res)=>{
 
     res.cookie("token", token,{
       httpOnly:true,
-      sameSite:"strict"
+      secure:true,
+      sameSite:"none",
+      maxAge: 7 * 24 * 60 * 60 * 1000
     })
 
     return res.status(200).json(user)
