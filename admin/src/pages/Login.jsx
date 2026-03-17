@@ -109,7 +109,7 @@ function LogIn  () {
            type="submit"
            className="mt-2 bg-blue-600  text-white py-2.5 rounded-md  font-medium hover:bg-blue-700  transition          "
          >
-          {loading ? <Loading/> : "Password is incorrect"}
+          {/* {loading ? <Loading/> : "Password is incorrect"} */}
            Sign In
          </button>
        </form>
