@@ -20,13 +20,18 @@ connectDB();
 
 
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:5174",
-       "https://e-commerce-livid-three-31.vercel.app"
-  ],
+// app.use(cors({
+//   origin: [
+//     "http://localhost:5173",
+//     "http://localhost:5174",
+//        "https://e-commerce-livid-three-31.vercel.app"
+//   ],
  
+//   credentials: true
+// }));
+
+app.use(cors({
+  origin: "https://e-commerce-livid-three-31.vercel.app",
   credentials: true
 }));
 
