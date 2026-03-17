@@ -30,9 +30,7 @@ app.use(cors({
   credentials: true
 }));
 
-// app.options("*", cors());
 
-// app.options("*", cors());
 
 app.use(express.json())
 app.use(cookieParser())
@@ -43,9 +41,7 @@ app.use('/api/product',productRoutes)
 app.use('/api/cart/', cartRoutes);
 app.use('/api/order/', orderRoutes);
 
-// app.listen(4000, () => {
-//     console.log("server is running on port 4000");
-// })
+
 
 const PORT = process.env.PORT || 4000;
 
