@@ -20,19 +20,25 @@ connectDB();
 
 
 
-// app.use(cors({
-//   origin: [
-//     "http://localhost:5173",
-//     "http://localhost:5174",
-//        "https://e-commerce-livid-three-31.vercel.app"
-//   ],
- 
-//   credentials: true
-// }));
+// Allow CORS from the frontend origin(s).
+// Update the list below (or set env vars) when you deploy to a new domain.
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  process.env.CLIENT_URL_2,
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://e-commerce-livid-three-31.vercel.app",
+  "https://e-commerce-o97j74kui-unknown9.vercel.app",
+].filter(Boolean);
 
 app.use(cors({
-  origin: "https://e-commerce-livid-three-31.vercel.app",
-  credentials: true
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error(`CORS policy does not allow access from origin ${origin}`));
+  },
+  credentials: true,
 }));
 
 
