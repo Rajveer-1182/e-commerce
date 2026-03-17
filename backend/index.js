@@ -24,9 +24,9 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    /vercel\.app$/
+       "https://e-commerce-livid-three-31.vercel.app"
   ],
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+ 
   credentials: true
 }));
 
