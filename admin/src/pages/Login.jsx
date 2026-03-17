@@ -56,18 +56,7 @@ function LogIn  () {
          Sign in to your admin account
        </h2>
    
-       {/* Google Login */}
-       {/* <button
-         onClick={googlelogIn}
-         className="
-           w-full mt-6 flex items-center justify-center gap-3 border border-slate-300 py-2.5 rounded-md hover:bg-slate-50  transition
-         "
-       >
-         <img src={google} alt="google" className="w-5 h-5" />
-         <span className="text-sm font-medium text-slate-700">
-           Continue with Google
-         </span>
-       </button> */}
+     
    
        {/* Divider */}
        <div className="flex items-center gap-3 my-6 ">

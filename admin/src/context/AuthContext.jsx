@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 export const AuthDataContext = createContext();
 
-let serverUrl = "http://localhost:4000";
+let serverUrl = "https://e-commerce-ipc4.onrender.com";
 
 let value = {
   serverUrl,
