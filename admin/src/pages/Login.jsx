@@ -25,8 +25,13 @@ function LogIn  () {
 // console.log("AdminContext value:", context);
   let navigate = useNavigate()
   const handleSingIn = async (e) => {
-
     e.preventDefault();
+ 
+      if (!email || !password) {
+    toast.error("Please fill email and password");
+    return;
+  }
+
     try {
       const result = await axios.post(serverUrl + '/api/auth/adminLogin', {
         email, password
