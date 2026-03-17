@@ -219,6 +219,14 @@ try {
 export const adminLogin = async(req,res)=>{
   try {
     let {email, password} = req.body
+
+  //  write validation here 
+  if(!email || !password){
+    return res.status(400).json({
+      message:"email or passwor is required"
+    })
+  }
+
     if(email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASS)
     {
        const token = generateToken1(email)
@@ -235,6 +243,6 @@ export const adminLogin = async(req,res)=>{
       message:"Invalid credential in Admin Log in"
     })
   } catch (error) {
-   return 
+   return res.status(500).json({ message: "Server error" });
   }
 }
