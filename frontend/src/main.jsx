@@ -7,6 +7,11 @@ import './index.css'
 import App from './App.jsx'
 import Authcontext from './context/Authcontext.jsx'
 import ShopContext from './context/ShopContext.jsx';
+import axios from "axios"; 
+
+
+
+axios.defaults.withCredentials = true;
   
 
 

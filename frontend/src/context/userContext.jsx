@@ -28,6 +28,8 @@ export function UserContextProvider({ children }) {
   }
    }
 
+   
+
 useEffect(()=>{
  fetchCurrentUser()
 },[])
