@@ -24,16 +24,16 @@ const RoutesComponent = () => {
       {userData &&  <Nav/>}
        
     <Routes>
-         {/* <Route
+         <Route
         path="/"
         element={
           userData
             ? <Navigate to={location.state?.from || "/home"} />
             : <Login />
         }
-      /> */}
+      />
 
-      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Home />} /> */}
 
       
 
