@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import Home from '../pages/Home'
-import LogIn from '../pages/LogIn'
+import Login from '../pages/LogIn'
 import Registration from '../pages/Registration'
 import About from '../pages/About'
 import Collection from '../pages/Collection'
@@ -24,22 +24,22 @@ const RoutesComponent = () => {
       {userData &&  <Nav/>}
        
     <Routes>
-         <Route
+         {/* <Route
         path="/"
         element={
           userData
             ? <Navigate to={location.state?.from || "/home"} />
-            : <LogIn />
+            : <Login />
         }
-      />
+      /> */}
 
-      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/" element={<Home />} />
 
       
 
 
       {/* <Route path="/login" element={userData ? <Navigate to="/" /> : <LogIn />} /> */}
-          <Route path='/login' element={<LogIn/>}/>
+          <Route path='/login' element={<Login/>}/>
 {/* <Route path="/registration" element={userData ? <Navigate to="/" /> : <Registration />} /> */}
 <Route path='/registration' element= {<Registration/>}/>
 
@@ -57,7 +57,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <About />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -66,7 +66,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <Collection />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -75,7 +75,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <PlaceOrder />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -84,7 +84,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <Order />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -93,7 +93,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <Product />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -102,7 +102,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <Contact />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -111,7 +111,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <ProductDetail />
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 
@@ -120,7 +120,7 @@ const RoutesComponent = () => {
         element={
           userData
             ? <Cart/>
-            : <Navigate to="/LogIn" state={{ from: location.pathname }} />
+            : <Navigate to="/Login" state={{ from: location.pathname }} />
         }
       />
 

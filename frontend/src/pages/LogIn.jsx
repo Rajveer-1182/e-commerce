@@ -18,7 +18,7 @@ const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { saveUrl } = useContext(authcontext);
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   const handleSingIn = async (e) => {
@@ -29,7 +29,8 @@ const LogIn = () => {
       }, { withCredentials: true });
       console.log(result.data);
        toast.success("User Logged in success")
-      Navigate("/home")
+  
+navigate("/home");
     } catch (error) {
       console.error("Error in handleSingIn:", error.response ? error.response.data : error.message);
     toast.error("user Not Logged In")
@@ -52,7 +53,7 @@ const LogIn = () => {
       console.log(result.data);
       // toast.success("google login Success")
       toast.success("google login Success")
-Navigate("/home")
+navigate("/home")
     } catch (error) {
       toast.success("google Login failed")
       console.log("error in the googleAuth" + error);
@@ -136,7 +137,7 @@ Navigate("/home")
       Don’t have an account?
       <span
         className="ml-1 text-blue-600 font-medium cursor-pointer hover:underline"
-        onClick={() => Navigate("/registration")}
+        onClick={() => navigate("/registration")}
       >
         Register
       </span>
