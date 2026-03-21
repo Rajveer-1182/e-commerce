@@ -36,7 +36,7 @@ const LogIn = () => {
       console.log(result.data);
        toast.success("User Logged in success")
     setuserData(result.data.user); 
-navigate("/home");
+navigate("/");
     } catch (error) {
       console.error("Error in handleSingIn:", error.response ? error.response.data : error.message);
     toast.error("user Not Logged In")
