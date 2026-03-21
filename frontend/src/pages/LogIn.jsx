@@ -33,7 +33,7 @@ const LogIn = () => {
       const result = await axios.post(saveUrl + '/api/auth/login', {
         email, password
       }, { withCredentials: true });
-      console.log(result.data);
+     
        toast.success("User Logged in success")
     setuserData(result.data); 
 navigate("/");

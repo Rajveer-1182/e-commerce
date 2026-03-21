@@ -33,7 +33,7 @@ function Order() {
                     setOrderData(allordersItem.reverse())
                    }
         } catch (error) {
-            console.log(error)
+            // console.log(error)
         }
      }
 
@@ -49,7 +49,7 @@ function Order() {
     <div className='h-[8%] w-[100%] text-center mt-[80px]'>
      <Title text1={"MY"} text2={"ORDERS"} />
     </div>
-         <div className='w-[100%] h-[92%] flex flex-wrap gap-[20px]'>
+         <div className='w-[100%] h-[92%] flex flex-wrap'>
          {
   orderData.length === 0 ? (
     <div className='w-full text-center mt-10'>
