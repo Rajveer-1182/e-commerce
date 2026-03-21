@@ -35,7 +35,7 @@ const LogIn = () => {
       }, { withCredentials: true });
       console.log(result.data);
        toast.success("User Logged in success")
-    setuserData(result.data.user); 
+    setuserData(result.data); 
 navigate("/");
     } catch (error) {
       console.error("Error in handleSingIn:", error.response ? error.response.data : error.message);
