@@ -24,7 +24,7 @@ function LatestCollection() {
        </div>
 
   {/*  we start the mapping the prodct in this div */}
-    <div className='w-[100%] h-[50%] mt-[20px] flex items-center justify-center flex-wrap gap-[40px] '>
+    <div className='w-[100%] h-[50%] mt-[20px] flex items-center justify-center flex-wrap gap-[15px] '>
      {
       latestProduct.map((item , index)=>(
        <Card key={index} name={item.name} image={item.image1} id={item._id} price={item.price} />

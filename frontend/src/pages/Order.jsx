@@ -29,9 +29,7 @@ function Order() {
                             allordersItem.push(item)
                         })
                     })
-                    console.log(result.data)
-                    toast.success("Order Success")
-                    // .reverse meaning means it show order as currently
+                   
                     setOrderData(allordersItem.reverse())
                    }
         } catch (error) {
@@ -47,13 +45,18 @@ function Order() {
     
 
   return (
-    <div className='lg:w-[100vw] w-[100vw] h-[100vh] p-[20px] pb-[150px] overflow-hiddden bg-white '>
+    <div className='lg:w-[100vw] w-[100vw] h-[100vh] p-[20px] pb-[150px] overflow-hiddden bg-gray-200 '>
     <div className='h-[8%] w-[100%] text-center mt-[80px]'>
      <Title text1={"MY"} text2={"ORDERS"} />
     </div>
          <div className='w-[100%] h-[92%] flex flex-wrap gap-[20px]'>
-          {
-            orderData.map((item,index)=>(
+         {
+  orderData.length === 0 ? (
+    <div className='w-full text-center mt-10'>
+      <p className='text-xl text-gray-500'>No Orders Found</p>
+    </div>
+  ) : (
+    orderData.map((item, index) => (
                 <div key={index}   className='w-[100%] h-[25%]  mt-8 border-t border-b'>
                      <div className='w-[100%] h-[100%] flex items-start gap-6 bg-slate-800 py-[10px] px-[10px] rounded-2xl relative '>
                      <img src={item.image1} alt=""  className='lg:h-[80px] lg:w-[80px] h-[140px] w-[140px] rounded-md'/>
@@ -103,6 +106,7 @@ function Order() {
                      </div>
                 </div>
             ))
+        )
           }
          </div>
     </div>

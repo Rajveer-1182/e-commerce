@@ -31,7 +31,7 @@ const Registration = () => {
       }, { withCredentials: true });
        await fetchCurrentUser();
       
-      console.log(result.data);
+      // console.log(result.data);
       toast.success("Registration Success")
       Navigate("/");
     } catch (error) {

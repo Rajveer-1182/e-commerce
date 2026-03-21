@@ -11,7 +11,7 @@ import axios from 'axios';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../../utils/Firebase';
 import { toast } from 'react-toastify';
-import back from '../assets/loginBackground.avif'
+import { userDataContext } from '../context/userContext'
 
 
 const LogIn = () => {
@@ -19,21 +19,30 @@ const LogIn = () => {
   const [password, setPassword] = useState("");
   const { saveUrl } = useContext(authcontext);
   const navigate = useNavigate();
+    //  for the loading of singin
+  const [loading, setLoading] = useState(false);
+
+   const { userData,setuserData } = useContext(userDataContext)
 
 
   const handleSingIn = async (e) => {
     e.preventDefault();
+  //   start loading
+    setLoading(true)
     try {
       const result = await axios.post(saveUrl + '/api/auth/login', {
         email, password
       }, { withCredentials: true });
       console.log(result.data);
        toast.success("User Logged in success")
-  
+    setuserData(result.data.user); 
 navigate("/home");
     } catch (error) {
       console.error("Error in handleSingIn:", error.response ? error.response.data : error.message);
     toast.error("user Not Logged In")
+
+    //  stop loading 
+    setLoading(false)
     }
   };
 
@@ -50,7 +59,7 @@ navigate("/home");
       }, {
         withCredentials: true
       });
-      console.log(result.data);
+     
       // toast.success("google login Success")
       toast.success("google login Success")
 navigate("/home")
@@ -120,15 +129,21 @@ navigate("/home")
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+     
 
       <button
         type="submit"
+        disabled={loading}
         className="
           mt-2 bg-blue-600  text-white py-2.5 rounded-md  font-medium hover:bg-blue-700  transition
-        "
-        // onClick={() => Navigate("/home")}
-      >
-        Sign In
+        ">
+
+                {loading ? (
+    <div className="w-5 h-5  border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+  ) : (
+    "Sign In"
+  )}
+
       </button>
     </form>
 

@@ -123,8 +123,8 @@ const categories = [
 
 const Home1 = () => {
   return (
-    <div className="w-full   min-h-[40px]  bg-white border-b border-slate-200  flex items-center  px-4 sm:px-6 lg:px-12 lg:mt-10 mt-10">
-      <div className="lg:w-full w-[100%] grid grid-cols-6 mt-[40px]  gap-2 m-5">
+    <div className="w-full min-h-[40px]  bg-white border-b border-slate-200  flex items-center  px-4 sm:px-6 lg:px-12 lg:mt-10 mt-10">
+      <div className="lg:w-full w-[100%] grid grid-cols-6 mt-[40px]  gap-5 lg:m-8">
         {categories.map((item, index) => (
           <div
             key={index}

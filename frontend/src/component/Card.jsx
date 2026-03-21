@@ -11,7 +11,8 @@ function Card({ name, image, id, price, detail, size }) {
   return (
     <div
       className="
-      w-[280px] 
+      lg:w-[240px]
+      w-[187px] 
       bg-white 
       rounded-2xl 
       overflow-hidden
@@ -20,7 +21,6 @@ function Card({ name, image, id, price, detail, size }) {
       transition-all 
       duration-300 
       hover:-translate-y-2
-     
     "
     >
       {/* Product Image */}

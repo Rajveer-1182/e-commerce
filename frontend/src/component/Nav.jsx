@@ -108,6 +108,13 @@ const Nav = () => {
       >
         Login
       </p>
+
+         <p className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                 onClick={()=> navigate("/profile")}
+                >
+                  Profile
+                </p>
+
     </div>
   )}
 </div>
@@ -121,7 +128,7 @@ const Nav = () => {
           <input
             type="text"
             placeholder="Search Here"
-            className="w-[90%] md:w-[60%] lg:w-[50%] px-6 py-3 rounded-full bg-gray-800 text-white outline-none"
+            className="w-[90%] md:w-[60%] lg:w-[50%] px-6 py-3 rounded-full bg-gray-200 text-black outline-none"
              onChange={(e)=>{setSearch(e.target.value)}} value={search}
              />
         </div>
@@ -162,6 +169,13 @@ const Nav = () => {
                 >
                   LogIn
                 </p>
+
+                 <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
+                 onClick={()=> navigate("/profile")}
+                >
+                  Profile
+                </p>
+
               </div>
             )}
     
@@ -170,7 +184,7 @@ const Nav = () => {
         <TiShoppingCart className="text-6xl"
      onClick={()=> navigate('/cart')}       
      />
-     <span className="  absolute -top-2  left-110  bg-red-300 text-md font-bold  h-8 w-8 flex items-center justify-center rounded-xl">
+     <span className="  absolute -top-1  left-105 bg-white  h-6 w-6 flex items-center justify-center rounded-xl">
              {totalCount()}        
             </span>
      </div>
