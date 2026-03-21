@@ -144,7 +144,7 @@ const Registration = () => {
       <button
         type="submit"
         className="mt-2 bg-blue-600 text-white py-2.5
-        rounded-md font-medium hover:bg-blue-700 transition"
+        rounded-md font-medium hover:bg-blue-700 transition cursor-pointer"
       >
         Create account
       </button>

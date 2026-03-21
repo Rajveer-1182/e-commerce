@@ -22,9 +22,17 @@ const RoutesComponent = () => {
 
      if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center">
-        Loading...
-      </div>
+     <div className="h-screen flex flex-col items-center justify-center bg-gray-50">
+  
+  {/* Spinner */}
+  <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+  
+  {/* Text */}
+  <p className="mt-4 text-gray-600 text-sm font-medium tracking-wide">
+    Loading, please wait...
+  </p>
+
+</div>
     );
   }
 

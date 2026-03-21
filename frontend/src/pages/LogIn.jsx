@@ -131,7 +131,7 @@ navigate("/home")
       />
      
 
-      <button
+      {/* <button
         type="submit"
         disabled={loading}
         className="
@@ -142,9 +142,28 @@ navigate("/home")
     <div className="w-5 h-5  border-4 border-white border-t-transparent rounded-full animate-spin"></div>
   ) : (
     "Sign In"
-  )}
+  )} */}
 
-      </button>
+
+
+      {/* </button> */}
+
+      <button
+  type="submit"
+  disabled={loading}
+  className="
+    mt-2 w-full flex items-center justify-center
+    bg-blue-600 text-white py-2.5 rounded-md font-medium
+    hover:bg-blue-700 transition duration-200
+    disabled:opacity-70 disabled:cursor-not-allowed
+  "
+>
+  {loading ? (
+    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+  ) : (
+    "Sign In"
+  )}
+</button>
     </form>
 
     {/* Footer */}
