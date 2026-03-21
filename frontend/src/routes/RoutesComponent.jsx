@@ -17,8 +17,16 @@ import Notfound from '../pages/Notfound'
 import Profile from '../Profilemenu0/Profile'
 
 const RoutesComponent = () => {
-  const { userData } = useContext(userDataContext)
+  const { userData,loading } = useContext(userDataContext)
   const location = useLocation()
+
+     if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
 
   return (
 <>
