@@ -43,7 +43,7 @@ function Hero({heroData,heroCount, setHeroCount }) {
     </div>
 
              <Background heroCount={heroCount}/>
-   <div className='absolute  lg:top-[83%] lg:left-[20%] md:top-[50%] top-[75%] left-[15%] flex items-center justify-center gap-[10px] font-bold '>
+   <div className='absolute  lg:top-[85%] lg:left-[20%] md:top-[50%] top-[82%] left-[45%] flex items-center justify-center gap-[10px] font-bold '>
   <FaCircle  className={`w-[14px] ${heroCount === 0 ? "fill-orange-400 " :"fill-white"}`} onClick={()=> setHeroCount(0)}/>
   <FaCircle  className={`w-[14px] ${heroCount === 1 ? "fill-orange-400 " :"fill-white"}`} onClick={()=> setHeroCount(1)}/>
   <FaCircle className={`w-[14px] ${heroCount === 2 ? "fill-orange-400 " :"fill-white"}`} onClick={()=> setHeroCount(2)}/>

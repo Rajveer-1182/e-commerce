@@ -1,20 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext,lazy, Suspense  } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
-import Home from '../pages/Home'
-import Login from '../pages/LogIn'
-import Registration from '../pages/Registration'
-import About from '../pages/About'
-import Collection from '../pages/Collection'
-import Product from '../pages/Product'
-import Contact from '../pages/Contact'
+
 import { userDataContext } from '../context/userContext'
 import Nav from '../component/Nav'
-import ProductDetail from '../pages/ProductDetail'
-import Cart from '../pages/Cart'
-import PlaceOrder from '../pages/PlaceOrder'
-import Order from '../pages/Order'
-import Notfound from '../pages/Notfound'
-import Profile from '../Profilemenu0/Profile'
+const Home = lazy(() => import('../pages/Home'))
+const Login = lazy(() => import('../pages/LogIn'))
+const Registration = lazy(() => import('../pages/Registration'))
+const About = lazy(() => import('../pages/About'))
+const Collection = lazy(() => import('../pages/Collection'))
+const Product = lazy(() => import('../pages/Product'))
+const Contact = lazy(() => import('../pages/Contact'))
+const ProductDetail = lazy(() => import('../pages/ProductDetail'))
+const Cart = lazy(() => import('../pages/Cart'))
+const PlaceOrder = lazy(() => import('../pages/PlaceOrder'))
+const Order = lazy(() => import('../pages/Order'))
+const Notfound = lazy(() => import('../pages/Notfound'))
+const Profile = lazy(() => import('../Profilemenu0/Profile'))
+
 
 const RoutesComponent = () => {
   const { userData,loading } = useContext(userDataContext)
@@ -39,6 +41,17 @@ const RoutesComponent = () => {
   return (
 <>
       {userData &&  <Nav/>}
+
+       <Suspense
+      fallback={
+        <div className="h-screen flex flex-col items-center justify-center bg-gray-50">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          <p className="mt-4 text-gray-600 text-sm font-medium tracking-wide">
+            Loading page...
+          </p>
+        </div>
+      }
+    >
        
     <Routes>
          <Route
@@ -51,9 +64,6 @@ const RoutesComponent = () => {
       />
 
       {/* <Route path="/" element={<Home />} /> */}
-
-      
-
 
       {/* <Route path="/login" element={userData ? <Navigate to="/" /> : <LogIn />} /> */}
           <Route path='/login' element={<Login/>}/>
@@ -151,6 +161,7 @@ const RoutesComponent = () => {
       <Route path='*' element={<Notfound/>}/>
 
     </Routes>
+    </Suspense>
     </>
   )
 }

@@ -118,10 +118,8 @@ const Nav = () => {
     </div>
   )}
 </div>
-
         </div>
       </div>
-
       {/* SEARCH BAR */}
       {showSearch && (
         <div className="w-full flex justify-center pb-4">
@@ -135,42 +133,46 @@ const Nav = () => {
       )}
     </nav>
 
-  <nav className="lg:hidden md:hidden fixed bottom-1  left-0 h-[6vh]  min-h-[50px] w-full bg-gray-100  flex items-center justify-around z-10 shadow-[0_-2px_10px_rgba(0,0,0,0.15)]">   
-       <IoHome className="text-6xl " 
+<nav className="
+lg:hidden md:hidden fixed bottom-0 left-0 
+h-[7vh] min-h-[55px] w-full 
+flex items-center justify-around z-50
+bg-white/30 backdrop-blur
+border-t border-white/20
+shadow-[0_-4px_20px_rgba(0,0,0,0.1)]
+">
+
+       <IoHome className="text-5xl text-gray-700 hover:text-black transition active:scale-90" 
         onClick={()=> navigate('/home')}
      /> 
 
-      <MdCollections className="text-6xl"
+      <MdCollections className="text-5xl text-gray-700 hover:text-black transition active:scale-90"
       onClick={()=> navigate('/collection')}
       />      
     
-        <MdOutlineAccountCircle className="text-6xl"
-        onMouseMove={() => setShowProfile(!showProfile)}
-             
+        <MdOutlineAccountCircle className="text-5xl text-gray-700 hover:text-black transition active:scale-90"
+        onMouseMove={() => setShowProfile(!showProfile)}   
         />
 
-
-     
          {showProfile && (
-              <div className="absolute right-20 -mt-45 w-50 text-green-300 rounded-xl shadow-lg bg-gray-500   transition-colors duration-200 hover:bg-gray-600">
-                <p className="px-4 py-2  cursor-pointer  transition-all"
+              <div className="absolute right-20 -mt-45 w-50 rounded-xl shadow-lg bg-gray-100 transition-colors duration-200 hover:bg-gray-600">
+                <p className="px-4 py-2  cursor-pointer transition-all font-semibold"
                  onClick={()=> navigate("/order")}
                 >
                   Orders
                 </p>
-                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
-                // onClick={()=>{()=>navigate("/about");setShowProfile(false)}}
+                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer font-semibold"
                  onClick={()=> navigate("/about")}
                 >
                   About
                 </p>
-                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
+                <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer font-semibold"
                  onClick={()=> navigate("/login")}
                 >
                   LogIn
                 </p>
 
-                 <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer"
+                 <p className="px-4 py-2 hover:bg-gray-700 cursor-pointer font-semibold"
                  onClick={()=> navigate("/profile")}
                 >
                   Profile
@@ -181,10 +183,10 @@ const Nav = () => {
     
 
      <div>
-        <TiShoppingCart className="text-6xl"
+        <TiShoppingCart className="text-5xl text-gray-700 hover:text-black transition active:scale-90"
      onClick={()=> navigate('/cart')}       
      />
-     <span className="  absolute -top-1  left-105 bg-white  h-6 w-6 flex items-center justify-center rounded-xl">
+     <span className=" absolute -top-1  left-103 bg-white  h-6 w-6 flex items-center justify-center rounded-xl">
              {totalCount()}        
             </span>
      </div>

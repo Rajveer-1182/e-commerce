@@ -7,8 +7,7 @@ import Ai from './component/Ai';
 const App = () => {
   return (
     <>
-      <div className='h-screen w-full bg-slate-800'>
-       {/* <div className="min-h-screen w-full bg-gray-100"> */}
+      <div className='h-screen w-full'>
         <RoutesComponent/>
           <ToastContainer />
           <Ai/>

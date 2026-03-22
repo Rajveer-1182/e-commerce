@@ -72,8 +72,6 @@ function PlaceOrder() {
   rzp.open(); // ✅ popup yahan open hota hai
 };
 
-
-
          const onsubmitHandler = async (e)=>{
         e.preventDefault();
 
@@ -136,12 +134,10 @@ function PlaceOrder() {
         }
       }
 
-    
   return (
     <div className='lg:w-[99vw] w-[100vw] min-h-[100vh] bg-gray-100 flex items-center justify-center flex-col md:flex-row gap-[50px] relative'>
          <div className='lg:w-[50%] w-[100%] h-[100%] flex items-center justify-center lg:mt-[0px] mt-[90px]'>
-             <form action=" " onSubmit={onsubmitHandler} className=' lg:w-[70%] w-[95%} lg:h-[70%] h-[100%]'>
-                 
+             <form action=" " onSubmit={onsubmitHandler} className=' lg:w-[70%] w-[95%} lg:h-[70%] h-[100%]'> 
                    <div className='py-[10px]'>
                    <Title text1={"DELIVERY"} text2={"INFORMATION"}/>
                     </div>     

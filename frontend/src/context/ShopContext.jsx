@@ -29,7 +29,7 @@ export const ShopDataContext = createContext(null)
 const getProducts = async ()=>{
     try {
         let result =  await axios.get(saveUrl  + "/api/product/list")
-        console.log(result.data);
+        // console.log(result.data);
         setproducts(result.data)
         
     } catch (error) {
@@ -88,7 +88,7 @@ try {
     let response = await axios.post(saveUrl + "/api/cart/get",{},{withCredentials: true});
     
     setCartItems(response.data);
-    console.log("user cart data", response.data);
+    // console.log("user cart data", response.data);
 } catch (error) {
     console.log(error)
     // toast.error("Error fetching cart data in usercart")  
