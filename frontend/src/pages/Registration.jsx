@@ -22,9 +22,11 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [number, setNumber] = useState(null);
   const Navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
 
   const handleSingup = async (e) => {
     e.preventDefault();
+    setLoading(true)
     try {
       const result = await axios.post(saveUrl + '/api/auth/register', {
         name, email, password, number
@@ -37,6 +39,7 @@ const Registration = () => {
     } catch (error) {
       console.log("error in the registration page " + error);
     toast.error("Registration failed")
+     setLoading(false)
     }
   };
 
@@ -141,13 +144,27 @@ const Registration = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button
-        type="submit"
-        className="mt-2 bg-blue-600 text-white py-2.5
-        rounded-md font-medium hover:bg-blue-700 transition cursor-pointer"
-      >
-        Create account
-      </button>
+
+
+        <button
+  type="submit"
+  disabled={loading}
+  className="
+    mt-2 w-full flex items-center justify-center
+    bg-blue-600 text-white py-2.5 rounded-md font-medium
+    hover:bg-blue-700 transition duration-200
+    disabled:opacity-70 disabled:cursor-not-allowed
+  "
+>
+  {loading ? (
+    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+  ) : (
+    "Create account"
+  )}
+</button>
+
+
+
     </form>
 
     {/* FOOTER */}
